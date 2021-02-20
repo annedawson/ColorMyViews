@@ -15,6 +15,7 @@
         android:layout_marginTop="@dimen/margin_wide"
         android:layout_marginEnd="@dimen/margin_wide"
         android:text="@string/box_one"
+        android:textColor="#FF0000"
         app:layout_constraintDimensionRatio=" "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -30,6 +30,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    // added 19 Feb 2021
+    // see https://youtu.be/omml4lK_b-A    from 7.08 min
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
 }
 
 dependencies {
