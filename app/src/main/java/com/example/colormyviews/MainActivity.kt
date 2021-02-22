@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
      * Attaches listeners to all the views.
      */
     private fun setListeners() {
-        val clickableViews: List<View> = listOf(binding.boxOneText, binding.boxTwoText, binding.boxThreeText, binding.boxFourText, binding.boxFiveText)
+        val clickableViews: List<View> = listOf(binding.boxOneText, binding.boxTwoText, binding.boxThreeText, binding.boxFourText, binding.boxFiveText, binding.constraintLayout, binding.redButton, binding.yellowButton, binding.greenButton)
 
         for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
@@ -71,16 +71,22 @@ class MainActivity : AppCompatActivity() {
     private fun makeColored(view: View) {
         when (view.id) {
 
-            // Boxes using Color class colors for background
+            // Boxes are colored using Color class colors for background
             R.id.box_one_text -> view.setBackgroundColor(Color.DKGRAY)
             R.id.box_two_text -> view.setBackgroundColor(Color.GRAY)
 
-            // Boxes using Android color resources for background
+
+            // Boxes are colored using Android color resources for background
             R.id.box_three_text -> view.setBackgroundResource(android.R.color.holo_green_light)
             R.id.box_four_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
 
-            else -> view.setBackgroundColor(Color.BLUE)
+            // Buttons are colored using Color class colors for background
+            R.id.red_button -> view.setBackgroundColor(Color.RED)
+            R.id.yellow_button -> view.setBackgroundColor(Color.YELLOW)
+            R.id.green_button -> view.setBackgroundColor(Color.GREEN)
+
+            else -> view.setBackgroundColor(Color.LTGRAY)
         }
     }
 }
