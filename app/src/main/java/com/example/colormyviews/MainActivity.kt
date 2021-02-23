@@ -82,10 +82,13 @@ class MainActivity : AppCompatActivity() {
             R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
 
             // Buttons are colored using Color class colors for background
-            R.id.red_button -> view.setBackgroundColor(Color.RED)
-            R.id.yellow_button -> view.setBackgroundColor(Color.YELLOW)
-            R.id.green_button -> view.setBackgroundColor(Color.GREEN)
+            R.id.red_button -> binding.boxThreeText.setBackgroundColor(Color.RED)
+            R.id.yellow_button -> binding.boxFourText.setBackgroundColor(Color.YELLOW)
+            R.id.green_button -> binding.boxFiveText.setBackgroundColor(Color.GREEN)
 
+            // Button is colored using project color resource (in colors.xml) for background
+            // R.id.green_button -> view.setBackgroundResource(R.color.my_green)
+            // the line below does NOT work and I don't know why
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
     }
